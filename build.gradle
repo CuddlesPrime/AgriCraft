@@ -31,6 +31,13 @@ repositories {
 		}
 	}
 	maven {
+		name = "Create"
+		url = "https://maven.createmod.net"
+		content {
+			includeGroup "com.simibubi.create"
+		}
+	}
+	maven {
 		name = "CurseForge"
 		url = "https://cursemaven.com"
 		content {
@@ -100,6 +107,8 @@ dependencies {
 
 	compileOnly "curse.maven:pamhc2crops-361385:5581644"  // pamhc2crops-NEOFORGE-1.21.0-1.0.0
 	localRuntime "curse.maven:pamhc2crops-361385:5581644"  // pamhc2crops-NEOFORGE-1.21.0-1.0.0
+
+	compileOnly("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }  // mechanical harvester compat
 
 	compileOnly "mcp.mobius.waila:wthit-api:neo-${wthit_version}"  // What The Hell Is That
 //	localRuntime "mcp.mobius.waila:wthit:neo-${wthit_version}"
